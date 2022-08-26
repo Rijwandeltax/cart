@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Add/Remove product from cart</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>test</description>
+        <fieldName>cartData</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>test</description>
+        <fieldName>action</fieldName>
+    </lightningMessageFields>
+    <masterLabel>ProductAddRemoveCartChannel</masterLabel>
+</LightningMessageChannel>

@@ -1,0 +1,71 @@
+<template>
+	<!-- This Modal will only be visible if showModal is set to true -->
+	<template if:true={showModal}>
+		<section aria-modal="true" class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container ">
+				<header class="slds-modal__header">
+					<h2 class="slds-text-heading_small">Cart</h2>
+					<lightning-icon class="slds-modal__close" icon-name="utility:close" size="small"
+						onclick={closeModal}></lightning-icon>
+				</header>
+				<div class="slds-modal__content modalBodySpinner">
+					<template if:true={showLoading}>
+						<lightning-spinner alternative-text="Loading" size="medium" class="spinnerClass">
+						</lightning-spinner>
+					</template>
+					<div class="slds-p-around_small">
+						<table class="slds-table slds-table_cell-buffer slds-table_bordered"
+							aria-labelledby="element-with-table-label other-element-with-table-label">
+							<thead>
+								<tr class="slds-line-height_reset">
+									<th class="" scope="col">
+										<div class="slds-truncate" title="Product Name">Product Name</div>
+									</th>
+									<th class="" scope="col">
+										<div class="slds-truncate" title="Quantity">Quantity</div>
+									</th>
+									<th class="" scope="col">
+										<div class="slds-truncate" title="Email">Total Price</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<template for:each={products} for:item="obj">
+									<tr class="inputRows" key={obj.Id}>
+										<th data-label="Opportunity Name" scope="row">
+											<p>{obj.Name}</p>
+										</th>
+										<td data-label="Account Name">
+											<p>{obj.quantity}</p>
+										</td>
+										<td data-label="Close Date">
+											<p>{obj.totalPrice}</p>
+										</td>
+									</tr>
+								</template>
+                                <tr class="inputRows" >
+                                    <th data-label="Opportunity Name" scope="row">
+                                        <p>Total</p>
+                                    </th>
+                                    <td data-label="Account Name">
+                                        <p></p>
+                                    </td>
+                                    <td data-label="Total Price">
+                                        <p>{totalPrice}</p>
+                                    </td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<footer class="slds-modal__footer">
+					<lightning-button label="Cancel" onclick={closeModal} class="slds-p-around_x-small">
+					</lightning-button>
+					<lightning-button variant="brand" label="Create Order" onclick={handleOrder}
+						class="slds-p-around_x-small" disabled={isDisable}></lightning-button>
+				</footer>
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</template>
+</template>

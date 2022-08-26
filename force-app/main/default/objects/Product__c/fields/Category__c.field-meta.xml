@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Running shoes</fullName>
+                <default>false</default>
+                <label>Running shoes</label>
+            </value>
+            <value>
+                <fullName>Boot</fullName>
+                <default>false</default>
+                <label>Boot</label>
+            </value>
+            <value>
+                <fullName>Formal shoes</fullName>
+                <default>false</default>
+                <label>Formal shoes</label>
+            </value>
+            <value>
+                <fullName>Hiking shoes</fullName>
+                <default>false</default>
+                <label>Hiking shoes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
