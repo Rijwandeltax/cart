@@ -1,6 +1,6 @@
 # Salesforce DX Project: Next Steps
 
-![alt text](https://youtu.be/owFdjkQjj40)
+![alt text](https://github.com/Rijwandeltax/cart/blob/master/Shopping%20Cart%20in%20LWC%20Salesforce.gif)
 
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
